@@ -1,5 +1,5 @@
-<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ï»¿<!doctype html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Estados & Estatus</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -9,7 +9,7 @@
   <div class="app__bar container">
     <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
     <div class="title">Estados & Estatus</div>
-    <div class="subtitle">Escala 1–10 y cambios en vivo</div>
+    <div class="subtitle">Escala 1â€“10 y cambios en vivo</div>
   </div>
   <div class="progress"><i></i></div>
 </header>
@@ -19,24 +19,24 @@
     <h2>Marcador de estatus</h2>
     <div style="display:grid; gap:10px; grid-template-columns:1fr 1fr">
       <select id="nivel">
-        <option>1 · humilde</option><option>2</option><option>3</option><option>4</option>
+        <option>1 Â· humilde</option><option>2</option><option>3</option><option>4</option>
         <option>5</option><option>6</option><option>7</option><option>8</option>
-        <option>9</option><option>10 · divino</option>
+        <option>9</option><option>10 Â· divino</option>
       </select>
       <button class="btn btn--accent" id="aplicar">Aplicar</button>
     </div>
     <div class="section" style="margin-top:10px">
-      <h3>Instrucción</h3>
-      <p id="guia" class="small">Selecciona un número y aplícalo a tu postura/voz.</p>
+      <h3>InstrucciÃ³n</h3>
+      <p id="guia" class="small">Selecciona un nÃºmero y aplÃ­calo a tu postura/voz.</p>
     </div>
   </section>
 
   <section class="section">
-    <h2>Cambio súbito</h2>
-    <p class="small">Pulsa para alterar el ritmo y provocar reacción en mesa.</p>
+    <h2>Cambio sÃºbito</h2>
+    <p class="small">Pulsa para alterar el ritmo y provocar reacciÃ³n en mesa.</p>
     <div style="display:flex; gap:8px; flex-wrap:wrap">
       <button class="btn" onclick="setMsg('Baja estatus, cede y pide algo concreto.')">Bajar</button>
-      <button class="btn" onclick="setMsg('Sube estatus, telegrafía autoridad sin bloquear.')">Subir</button>
+      <button class="btn" onclick="setMsg('Sube estatus, telegrafÃ­a autoridad sin bloquear.')">Subir</button>
       <button class="btn" onclick="setMsg('Intercambia estatus con otro PJ mediante halago o reproche.')">Intercambiar</button>
     </div>
   </section>
@@ -46,9 +46,9 @@
 <script src="assets/js/app.js"></script>
 <script>
 const tips = [
- "Evita negar; ofrece 'sí, pero' o 'no, pero' para mover la escena.",
- "Telegrafía lo que haces si hay confusión.",
- "Dale foco a otro jugador: pásale la pelota.",
+ "Evita negar; ofrece 'sÃ­, pero' o 'no, pero' para mover la escena.",
+ "TelegrafÃ­a lo que haces si hay confusiÃ³n.",
+ "Dale foco a otro jugador: pÃ¡sale la pelota.",
  "Una sola cosa rara por escena."
 ];
 
@@ -62,6 +62,7 @@ document.getElementById("aplicar").addEventListener("click", ()=>{
   toast("Cambio de estatus aplicado");
 });
 
-function setMsg(s){ document.getElementById("guia").innerText = s; toast("¡Hecho!") }
+function setMsg(s){ document.getElementById("guia").innerText = s; toast("Â¡Hecho!") }
 </script>
 </body></html>
+

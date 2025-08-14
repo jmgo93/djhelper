@@ -1,5 +1,5 @@
-<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ï»¿<!doctype html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Objetos de aire</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -9,35 +9,36 @@
   <div class="app__bar container">
     <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
     <div class="title">Objetos de aire</div>
-    <div class="subtitle">Acción creíble con mímica útil</div>
+    <div class="subtitle">AcciÃ³n creÃ­ble con mÃ­mica Ãºtil</div>
   </div>
   <div class="progress"><i></i></div>
 </header>
 
 <main class="container">
   <section class="section">
-    <h2>Práctica guiada</h2>
-    <p class="small">Crea el objeto con volumen en la mano, mantén medidas y peso.</p>
+    <h2>PrÃ¡ctica guiada</h2>
+    <p class="small">Crea el objeto con volumen en la mano, mantÃ©n medidas y peso.</p>
     <div style="display:flex; gap:8px; flex-wrap:wrap">
       <button class="btn btn--accent" onclick="obj()">Objeto</button>
       <button class="btn" onclick="seq()">Secuencia</button>
     </div>
     <div class="section" style="margin-top:10px">
-      <p id="out" class="small">—</p>
+      <p id="out" class="small">â€”</p>
     </div>
   </section>
 </main>
 
-<footer class="app"><div class="container small">Telegrafía si hace falta para que todos lo vean claro.</div></footer>
+<footer class="app"><div class="container small">TelegrafÃ­a si hace falta para que todos lo vean claro.</div></footer>
 <script src="assets/js/app.js"></script>
 <script>
-const objetos = ["taza caliente", "libro pesado", "poción viscosa", "cuerda tensa", "antorcha chisporroteante", "amuleto pequeño"];
+const objetos = ["taza caliente", "libro pesado", "pociÃ³n viscosa", "cuerda tensa", "antorcha chisporroteante", "amuleto pequeÃ±o"];
 const secuencias = [
   "Abre nevera ? coge verduras ? corta en tabla ? tira mondas ? lava cuchillo.",
   "Saca cuerda ? tensa ? anuda ? prueba firmeza ? asiente.",
-  "Saca mapa ? despliega ? señala ruta ? dobla con cuidado."
+  "Saca mapa ? despliega ? seÃ±ala ruta ? dobla con cuidado."
 ];
 function obj(){ out.innerText = "Objeto: " + objetos[Math.floor(Math.random()*objetos.length)]; toast("Objeto listo") }
 function seq(){ out.innerText = "Secuencia: " + secuencias[Math.floor(Math.random()*secuencias.length)] }
 </script>
 </body></html>
+

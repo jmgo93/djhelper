@@ -1,5 +1,5 @@
-<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ï»¿<!doctype html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PNJ Express</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -9,7 +9,7 @@
   <div class="app__bar container">
     <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
     <div class="title">PNJ Express</div>
-    <div class="subtitle">Voz · Rasgo · Objetivo · Gesto</div>
+    <div class="subtitle">Voz Â· Rasgo Â· Objetivo Â· Gesto</div>
   </div>
   <div class="progress"><i></i></div>
 </header>
@@ -18,30 +18,30 @@
   <section class="section">
     <h2>Generar PNJ en 10 segundos</h2>
     <div style="display:grid; gap:8px; grid-template-columns:1fr 1fr">
-      <button class="btn btn--accent" id="go">¡Crear PNJ!</button>
+      <button class="btn btn--accent" id="go">Â¡Crear PNJ!</button>
       <button class="btn" id="otro">Cambiar detalle</button>
     </div>
     <div class="section" style="margin-top:10px">
-      <h3 id="nombre">Nombre: —</h3>
-      <p id="voz" class="small">Voz: —</p>
-      <p id="rasgo" class="small">Rasgo: —</p>
-      <p id="objetivo" class="small">Objetivo inmediato: —</p>
-      <p id="gesto" class="small">Gesto/Actitud: —</p>
+      <h3 id="nombre">Nombre: â€”</h3>
+      <p id="voz" class="small">Voz: â€”</p>
+      <p id="rasgo" class="small">Rasgo: â€”</p>
+      <p id="objetivo" class="small">Objetivo inmediato: â€”</p>
+      <p id="gesto" class="small">Gesto/Actitud: â€”</p>
     </div>
   </section>
 
   <section class="section">
     <h2>Consejo</h2>
-    <p>Escoge <em>un</em> rasgo fuerte y mantenlo en toda la escena. <strong>Telegrafía</strong> con gesto/voz para que la mesa lo identifique al instante.</p>
+    <p>Escoge <em>un</em> rasgo fuerte y mantenlo en toda la escena. <strong>TelegrafÃ­a</strong> con gesto/voz para que la mesa lo identifique al instante.</p>
   </section>
 </main>
-<footer class="app"><div class="container small">No persistente. Cambia de módulo cuando quieras.</div></footer>
+<footer class="app"><div class="container small">No persistente. Cambia de mÃ³dulo cuando quieras.</div></footer>
 <script src="assets/js/app.js"></script>
 <script>
-const nombres = ["Sira", "Mauro", "Tilda", "Ramal", "Nerea", "Iván", "Kora", "Bel", "Jakes", "Tamar"];
-const voces   = ["susurra con prisas", "habla nasal y rápido", "pausas largas y mirada fija", "risita contenida", "grave y lento", "tartamudeo leve cuando miente"];
-const rasgos  = ["obsesión por el orden", "colecciona favores", "odia las deudas", "adora a los héroes", "miedo a los perros", "cree en señales y augurios"];
-const objetivos = ["conseguir información concreta", "vender algo dudoso", "probar lealtad", "pedir perdón de verdad", "evitar a alguien", "cobrar una deuda hoy"];
+const nombres = ["Sira", "Mauro", "Tilda", "Ramal", "Nerea", "IvÃ¡n", "Kora", "Bel", "Jakes", "Tamar"];
+const voces   = ["susurra con prisas", "habla nasal y rÃ¡pido", "pausas largas y mirada fija", "risita contenida", "grave y lento", "tartamudeo leve cuando miente"];
+const rasgos  = ["obsesiÃ³n por el orden", "colecciona favores", "odia las deudas", "adora a los hÃ©roes", "miedo a los perros", "cree en seÃ±ales y augurios"];
+const objetivos = ["conseguir informaciÃ³n concreta", "vender algo dudoso", "probar lealtad", "pedir perdÃ³n de verdad", "evitar a alguien", "cobrar una deuda hoy"];
 const gestos  = ["ajusta sus guantes", "muerde el labio", "chasquea los dedos", "frota un amuleto", "cruje nudillos", "no mira a los ojos"];
 
 function pick(a){ return a[Math.floor(Math.random()*a.length)] }
@@ -57,3 +57,4 @@ document.getElementById("go").addEventListener("click", ()=>{ fill(true); toast(
 document.getElementById("otro").addEventListener("click", ()=>{ fill(false) });
 </script>
 </body></html>
+

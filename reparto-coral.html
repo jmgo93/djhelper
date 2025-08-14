@@ -1,5 +1,5 @@
-<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+Ôªø<!doctype html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Reparto coral</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -9,39 +9,40 @@
   <div class="app__bar container">
     <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
     <div class="title">Reparto coral</div>
-    <div class="subtitle">Roles r·pidos y vÌnculos</div>
+    <div class="subtitle">Roles r√°pidos y v√≠nculos</div>
   </div>
   <div class="progress"><i></i></div>
 </header>
 
 <main class="container">
   <section class="section">
-    <h2>Rol + VÌnculo</h2>
+    <h2>Rol + V√≠nculo</h2>
     <div style="display:grid; gap:8px; grid-template-columns:1fr 1fr 1fr">
       <button class="btn" onclick="r()">Rol</button>
-      <button class="btn" onclick="v()">VÌnculo</button>
-      <button class="btn btn--accent" onclick="rv()">Rol + VÌnculo</button>
+      <button class="btn" onclick="v()">V√≠nculo</button>
+      <button class="btn btn--accent" onclick="rv()">Rol + V√≠nculo</button>
     </div>
     <div class="section" style="margin-top:10px">
-      <p id="rol" class="small">Rol: ó</p>
-      <p id="vin" class="small">VÌnculo: ó</p>
+      <p id="rol" class="small">Rol: ‚Äî</p>
+      <p id="vin" class="small">V√≠nculo: ‚Äî</p>
     </div>
   </section>
 </main>
 
-<footer class="app"><div class="container small">Evita demasiados ìrarosî; cuida la armonÌa del grupo.</div></footer>
+<footer class="app"><div class="container small">Evita demasiados ‚Äúraros‚Äù; cuida la armon√≠a del grupo.</div></footer>
 <script src="assets/js/app.js"></script>
 <script>
-const roles = ["GuÌa optimista", "EscÈptico metÛdico", "Camorrista noble", "Diplom·tica cansada", "Erudita curiosa", "PÌcaro arrepentido"];
+const roles = ["Gu√≠a optimista", "Esc√©ptico met√≥dico", "Camorrista noble", "Diplom√°tica cansada", "Erudita curiosa", "P√≠caro arrepentido"];
 const vincs = [
  "Debe un favor a [NOMBRE].",
  "Quiere proteger a [NOMBRE] cueste lo que cueste.",
- "DesconfÌa de [NOMBRE] por un error pasado.",
+ "Desconf√≠a de [NOMBRE] por un error pasado.",
  "Admira en secreto a [NOMBRE].",
  "Quiere impresionar a [NOMBRE] hoy."
 ];
 function r(){ document.getElementById("rol").innerText = "Rol: " + roles[Math.floor(Math.random()*roles.length)] }
-function v(){ document.getElementById("vin").innerText = "VÌnculo: " + vincs[Math.floor(Math.random()*vincs.length)] }
+function v(){ document.getElementById("vin").innerText = "V√≠nculo: " + vincs[Math.floor(Math.random()*vincs.length)] }
 function rv(){ r(); v(); toast("Reparto listo") }
 </script>
 </body></html>
+
