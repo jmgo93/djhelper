@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compartir equipo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#0f1115">
+</head>
+<body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">← Hub</a>
+    <div>
+      <div class="title">Compartir equipo</div>
+      <div class="subtitle">Intercambios con impacto narrativo</div>
+    </div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class='section'>
+  <h2>Generar intercambio</h2>
+  <div style='display:flex;gap:8px;flex-wrap:wrap'>
+    <button class='btn btn--accent' onclick='go()'>Proponer</button>
+  </div>
+  <div class='section' style='margin-top:10px'><p id='out' class='small'>—</p></div>
+</section>
+</main>
+
+<footer class="app"><div class="container small">Sin guardar datos. Cambia de módulo cuando quieras.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const ideas = [
+  'Entrega tu objeto clave a [NOMBRE] y pide que lo use en tu ausencia.',
+  'Cambia tu armadura por movimiento: ganas agilidad, pierdes protección; negocia con otro PJ.',
+  'Regala un consumible a quien menos lo espera y explícales por qué confías en él/ella.',
+  'Devuelve algo que tomaste prestado con una mejora o nota afectuosa.'
+];
+function go(){ out.textContent = ideas[Math.floor(Math.random()*ideas.length)]; toast('Intercambio'); }
+</script>
+</body>
+</html>

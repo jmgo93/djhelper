@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalles improvisados</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#0f1115">
+</head>
+<body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">← Hub</a>
+    <div>
+      <div class="title">Detalles improvisados</div>
+      <div class="subtitle">Gustos, miedos, manías</div>
+    </div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class='section'>
+  <h2>Rasgo al vuelo</h2>
+  <div style='display:flex;gap:8px;flex-wrap:wrap'>
+    <button class='btn btn--accent' onclick='g()'>Gusto</button>
+    <button class='btn' onclick='m()'>Miedo</button>
+    <button class='btn' onclick='n()'>Manía</button>
+  </div>
+  <div class='section' style='margin-top:10px'><p id='o' class='small'>—</p></div>
+</section>
+</main>
+
+<footer class="app"><div class="container small">Sin guardar datos. Cambia de módulo cuando quieras.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const G=['pan recién hecho','música con laúd','armas pequeñas','puzzles de madera'];
+const M=['pájaros dentro de edificios','cruces de puentes','quedarse solo','olores dulzones'];
+const N=['contar escalones','ordenar monedas por fecha','evitar decir nombres propios','tocar siempre la pared izquierda'];
+function g(){ o.textContent='Gusto: '+G[Math.floor(Math.random()*G.length)] }
+function m(){ o.textContent='Miedo: '+M[Math.floor(Math.random()*M.length)] }
+function n(){ o.textContent='Manía: '+N[Math.floor(Math.random()*N.length)] }
+</script>
+</body>
+</html>

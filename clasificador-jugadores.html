@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clasificador de jugadores</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#0f1115">
+</head>
+<body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">← Hub</a>
+    <div>
+      <div class="title">Clasificador de jugadores</div>
+      <div class="subtitle">Tipos por motivación (inspirado en Laws)</div>
+    </div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class='section'>
+  <h2>Descubre el estilo</h2>
+  <div style='display:flex;gap:8px;flex-wrap:wrap'>
+    <button class='btn btn--accent' onclick='pick()'>Sugerir tipo</button>
+  </div>
+  <div class='section' style='margin-top:10px'>
+    <h3 id='tipo'>—</h3>
+    <p class='small' id='desc'>Pulsa para ver un tipo y una forma de hacerle brillar.</p>
+  </div>
+</section>
+</main>
+
+<footer class="app"><div class="container small">Sin guardar datos. Cambia de módulo cuando quieras.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const tipos = [
+  ['Combatiente', 'Disfruta del desafío táctico. Dales objetivos claros y enemigos con personalidad.'],
+  ['Narrativista', 'Quiere historia y emoción. Dales decisiones con consecuencia emocional.'],
+  ['Explorador', 'Ama descubrir lugares, culturas y misterios. Dales mapas, rumores y artefactos.'],
+  ['Actor', 'Se centra en la interpretación. Dales escenas sociales y conflictos internos.'],
+  ['Optimización', 'Le gustan builds y recursos. Dales puzzles mecánicos y recompensas notorias.'],
+  ['Casual', 'Quiere divertirse sin presión. Dales momentos sencillos y apoyos claros.']
+];
+function pick(){
+  const [t,d] = tipos[Math.floor(Math.random()*tipos.length)];
+  tipo.textContent = t; desc.textContent = d; toast('Tipo sugerido');
+}
+</script>
+</body>
+</html>

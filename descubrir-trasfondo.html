@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descubrir trasfondo</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="theme-color" content="#0f1115">
+</head>
+<body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">← Hub</a>
+    <div>
+      <div class="title">Descubrir trasfondo</div>
+      <div class="subtitle">Interludios y hoguera</div>
+    </div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class='section'>
+  <h2>Inicia la charla</h2>
+  <button class='btn btn--accent' onclick='go()'>Pregunta</button>
+  <div class='section' style='margin-top:10px'><p id='p' class='small'>—</p></div>
+</section>
+</main>
+
+<footer class="app"><div class="container small">Sin guardar datos. Cambia de módulo cuando quieras.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const P = [
+  'Cuéntame el primer recuerdo que te hizo querer ser quien eres.',
+  '¿Qué te avergüenza admitir delante del grupo, pero deberías decir?',
+  '¿Qué promesa incumplida te pesa hoy?',
+  '¿Quién fue tu mejor maestro y qué te enseñó que hoy usarás?'
+];
+function go(){ p.textContent = P[Math.floor(Math.random()*P.length)]; toast('Trasfondo'); }
+</script>
+</body>
+</html>
