@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang='es'>
+<head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>NPC Express</title>
+<link rel='stylesheet' href='../../assets/css/style.css'>
+</head>
+<body>
+<div class='topbar'><div class='inner container'>
+  <a class='inline' href='../../index.html'>← Volver</a>
+  <div class='badge'>NPC Express</div>
+</div></div>
+
+<main class='container'>
+  <div class='card' style='padding:16px; margin-top:14px'>
+    <button class='btn' onclick='gen()'>Generar PNJ</button>
+  </div>
+  <div id='npc' class='card' style='padding:18px; margin-top:12px;'></div>
+</main>
+
+<script>
+const rasgos=["voz nasal","risa fácil","mirada intensa","manos temblorosas","susurra hechizos","camina encorvado"];
+const metas=["proteger a su hermana","pagar una deuda","demostrar su valía","escapar del pasado","ocultar un crimen","conseguir un artefacto"];
+const secretos=["odia al líder del grupo","tiene miedo a los pájaros","malversa fondos","es gemelo idéntico","finge su título","está enamorado de un PJ"];
+const estatus=["1 humilde","3 bajo","5 medio","7 alto","9 muy alto"];
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function gen(){
+  const html = 
+  <h3 style='margin:0 0 6px 0'></h3>
+  <p style='margin:4px 0'><b>Rasgo:</b>  · <b>Estatus:</b> </p>
+  <p style='margin:4px 0'><b>Meta:</b> </p>
+  <p style='margin:4px 0'><b>Secreto:</b> </p>;
+  document.getElementById('npc').innerHTML = html;
+}
+function nombre(){
+  const n1=["Ka","Lo","Mi","Sa","El","Ar","Ve","Na","Ri","To"]; 
+  const n2=["yra","dan","iel","ón","ia","dor","an","ra","en","is"];
+  return n1[Math.floor(Math.random()*n1.length)] + n2[Math.floor(Math.random()*n2.length)];
+}
+</script>
+</body></html>

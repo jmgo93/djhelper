@@ -1,0 +1,11 @@
+﻿# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.log
+
+# Build/Cache (si más adelante usas bundlers)
+dist/
+node_modules/

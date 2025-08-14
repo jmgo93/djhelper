@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang='es'>
+<head>
+<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Ayudante de DJ</title>
+<link rel='stylesheet' href='../../assets/css/style.css'>
+</head>
+<body>
+<div class='topbar'><div class='inner container'>
+  <a class='inline' href='../../index.html'>← Volver</a>
+  <div class='badge'>Ayudante de DJ</div>
+</div></div>
+
+<main class='container'>
+  <div class='card' style='padding:16px; margin-top:14px;'>
+    <div class='grid' style='grid-template-columns:1fr; gap:10px'>
+      <button class='btn' onclick='pick("siYAdemas")'>«Sí, y además…»</button>
+      <button class='btn' onclick='pick("estatus")'>Cambio de estatus</button>
+      <button class='btn' onclick='pick("complicacion")'>Complicación elegante</button>
+      <button class='btn' onclick='pick("gancho")'>Gancho de escena</button>
+    </div>
+  </div>
+
+  <div id='out' class='card' style='padding:18px; margin-top:12px; min-height:120px;'></div>
+</main>
+
+<script>
+const data={
+ siYAdemas:[
+  "Acepta la propuesta y añade un coste pequeño.",
+  "Dota un detalle: nombre, relación o rasgo físico.",
+  "Afirma algo y justifícalo en 2 frases."
+ ],
+ estatus:[
+  "Baja tu estatus: admite culpa o pide ayuda.",
+  "Sube tu estatus: marca límites con calma.",
+  "Intercambia estatus a mitad de frase."
+ ],
+ complicacion:[
+  "Sí, pero… aparece una deuda social.",
+  "No, pero… surge una pista inesperada.",
+  "No, y además… alguien inocente sale dañado."
+ ],
+ gancho:[
+  "Empieza en media res: «…y por eso llegas tarde».",
+  "Introduce un objeto de aire significativo.",
+  "Usa un conector del compañero (algo que acaba de narrar)."
+ ]
+};
+function pick(key){
+  const arr=data[key]; const x=arr[Math.floor(Math.random()*arr.length)];
+  document.getElementById('out').innerHTML = <p style="margin:0; font-size:1.05rem"></p>;
+}
+</script>
+</body></html>
