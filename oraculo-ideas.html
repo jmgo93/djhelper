@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oráculo de ideas</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
+    <div class="title">Oráculo de ideas</div>
+    <div class="subtitle">“Sí, y además” para arrancar escenas</div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Semilla rápida</h2>
+    <p class="small">Elige tono y pulsa “Generar”. Léelo en voz alta para encender la mesa.</p>
+    <div style="display:grid; gap:10px; grid-template-columns:1fr 1fr">
+      <select id="tono">
+        <option value="aventura">Aventura</option>
+        <option value="intriga">Intriga</option>
+        <option value="drama">Drama</option>
+        <option value="terror">Terror</option>
+        <option value="comedia">Comedia</option>
+      </select>
+      <button class="btn btn--accent" id="gen">Generar</button>
+    </div>
+    <div id="salida" class="section" style="margin-top:12px">
+      <h3>Propuesta</h3>
+      <p class="small" id="texto">Selecciona un tono y genera una propuesta.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Regla de oro</h2>
+    <p>Di: <strong>“Sí, y además…”</strong>, añade un detalle concreto y <em>pasa el foco</em> a otro jugador con una pregunta afirmativa del tipo «Entonces, ¿tomas la antorcha?». </p>
+  </section>
+</main>
+
+<footer class="app"><div class="container small">Sin guardar datos. Navega libremente.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const seeds = {
+  aventura:[
+    "Estáis a un solo paso… pero falta <em>una llave imposible</em>.",
+    "Una aliada pide ayuda inmediata; hacerlo tendrá un coste visible.",
+    "Un mapa revela un atajo peligroso con una <em>ventaja única</em>."
+  ],
+  intriga:[
+    "Alguien miente con elegancia; la verdad <em>está al alcance</em> si cedéis algo.",
+    "Una carta anónima promete respuestas en un lugar público, <em>ya</em>.",
+    "La pista obvia es una trampa blanda: os desvía, no os mata."
+  ],
+  drama:[
+    "Una relación se tensa si dices lo que <em>sientes</em> de verdad.",
+    "Un secreto propio sale a la luz… por vuestra elección.",
+    "Alguien os salva y os <em>debe</em> (o le debéis) algo real."
+  ],
+  terror:[
+    "Algo cotidiano se vuelve hostil si lo miras demasiado.",
+    "Para estar a salvo, debéis <em>obedecer</em> una regla absurda.",
+    "El lugar acepta ofrendas y <em>exige</em> silencio."
+  ],
+  comedia:[
+    "El plan funciona… pero de manera <em>ridículamente literal</em>.",
+    "Un PNJ secundario es <em>demasiado</em> competente.",
+    "La autoridad os confunde con unos expertos improbables."
+  ]
+};
+
+document.getElementById("gen").addEventListener("click",()=>{
+  const tono = document.getElementById("tono").value;
+  const arr = seeds[tono]||[];
+  const pick = arr[Math.floor(Math.random()*arr.length)] || "Sí… y además, añade un detalle concreto ahora.";
+  document.getElementById("texto").innerHTML = pick;
+  toast("Oráculo listo");
+});
+</script>
+</body>
+</html>

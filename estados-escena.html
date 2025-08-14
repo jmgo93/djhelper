@@ -1,0 +1,67 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estados & Estatus</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head><body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
+    <div class="title">Estados & Estatus</div>
+    <div class="subtitle">Escala 1–10 y cambios en vivo</div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Marcador de estatus</h2>
+    <div style="display:grid; gap:10px; grid-template-columns:1fr 1fr">
+      <select id="nivel">
+        <option>1 · humilde</option><option>2</option><option>3</option><option>4</option>
+        <option>5</option><option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10 · divino</option>
+      </select>
+      <button class="btn btn--accent" id="aplicar">Aplicar</button>
+    </div>
+    <div class="section" style="margin-top:10px">
+      <h3>Instrucción</h3>
+      <p id="guia" class="small">Selecciona un número y aplícalo a tu postura/voz.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cambio súbito</h2>
+    <p class="small">Pulsa para alterar el ritmo y provocar reacción en mesa.</p>
+    <div style="display:flex; gap:8px; flex-wrap:wrap">
+      <button class="btn" onclick="setMsg('Baja estatus, cede y pide algo concreto.')">Bajar</button>
+      <button class="btn" onclick="setMsg('Sube estatus, telegrafía autoridad sin bloquear.')">Subir</button>
+      <button class="btn" onclick="setMsg('Intercambia estatus con otro PJ mediante halago o reproche.')">Intercambiar</button>
+    </div>
+  </section>
+</main>
+
+<footer class="app"><div class="container small">Tip: acepta el cambio, no lo discutas.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const tips = [
+ "Evita negar; ofrece 'sí, pero' o 'no, pero' para mover la escena.",
+ "Telegrafía lo que haces si hay confusión.",
+ "Dale foco a otro jugador: pásale la pelota.",
+ "Una sola cosa rara por escena."
+];
+
+document.getElementById("aplicar").addEventListener("click", ()=>{
+  const n = document.getElementById("nivel").selectedIndex + 1;
+  const t = [
+   "humilde", "inseguro", "dubitativo", "neutral", "confiado",
+   "firme", "audaz", "dominante", "imponente", "divino"
+  ][n-1];
+  document.getElementById("guia").innerText = `Interpreta ${n}/10 (${t}). Postura/voz acordes. Tip: ${tips[Math.floor(Math.random()*tips.length)]}`;
+  toast("Cambio de estatus aplicado");
+});
+
+function setMsg(s){ document.getElementById("guia").innerText = s; toast("¡Hecho!") }
+</script>
+</body></html>

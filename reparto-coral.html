@@ -1,0 +1,47 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reparto coral</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head><body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
+    <div class="title">Reparto coral</div>
+    <div class="subtitle">Roles rápidos y vínculos</div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Rol + Vínculo</h2>
+    <div style="display:grid; gap:8px; grid-template-columns:1fr 1fr 1fr">
+      <button class="btn" onclick="r()">Rol</button>
+      <button class="btn" onclick="v()">Vínculo</button>
+      <button class="btn btn--accent" onclick="rv()">Rol + Vínculo</button>
+    </div>
+    <div class="section" style="margin-top:10px">
+      <p id="rol" class="small">Rol: —</p>
+      <p id="vin" class="small">Vínculo: —</p>
+    </div>
+  </section>
+</main>
+
+<footer class="app"><div class="container small">Evita demasiados “raros”; cuida la armonía del grupo.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const roles = ["Guía optimista", "Escéptico metódico", "Camorrista noble", "Diplomática cansada", "Erudita curiosa", "Pícaro arrepentido"];
+const vincs = [
+ "Debe un favor a [NOMBRE].",
+ "Quiere proteger a [NOMBRE] cueste lo que cueste.",
+ "Desconfía de [NOMBRE] por un error pasado.",
+ "Admira en secreto a [NOMBRE].",
+ "Quiere impresionar a [NOMBRE] hoy."
+];
+function r(){ document.getElementById("rol").innerText = "Rol: " + roles[Math.floor(Math.random()*roles.length)] }
+function v(){ document.getElementById("vin").innerText = "Vínculo: " + vincs[Math.floor(Math.random()*vincs.length)] }
+function rv(){ r(); v(); toast("Reparto listo") }
+</script>
+</body></html>

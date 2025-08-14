@@ -1,57 +1,82 @@
-ï»¿<!doctype html>
-<html lang='es'>
+<!doctype html>
+<html lang="es">
 <head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>TÃ©cnicas Rol Â· Hub</title>
-<link rel='stylesheet' href='./assets/css/style.css'>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Técnicas Rol · Hub</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="theme-color" content="#0f1115">
 </head>
 <body>
-<header class='topbar'>
-  <div class='inner container'>
-    <div class='logo'>TÃ©cnicas Rol Â· Hub</div>
-    <div class='badge'>Modo: sin guardado</div>
-  </div>
-</header>
+  <header class="app">
+    <div class="app__bar container">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div class="title">Técnicas Rol</div>
+        <div class="subtitle">Herramientas rápidas para improvisar mejor</div>
+      </div>
+    </div>
+    <div class="progress"><i></i></div>
+  </header>
 
-<main class='container'>
-  <div class='card' style='padding:18px; margin-top:16px;'>
-    <p style='margin:0; color:var(--muted)'>Elige una herramienta. Cada HTML es independiente y vuelve aquÃ­ sin guardar estado.</p>
-  </div>
+  <main class="container">
+    <section class="section">
+      <h2>Panel de herramientas</h2>
+      <p class="small">Sin guardar información. Salta entre módulos cuando lo necesites.</p>
+      <div class="badges" style="margin-top:8px">
+        <div class="badge badge--accent">Móvil-first</div>
+        <div class="badge badge--blue">Estilo sobrio</div>
+        <div class="badge">Gamificación suave</div>
+      </div>
+    </section>
 
-  <section class='grid tools' style='margin-top:14px;'>
-    <a class='card tool' href='./src/tools/ayudante-dj.html'>
-      <h3>Ayudante de DJ (Impro rÃ¡pida)</h3>
-      <p>Microâ€‘prompts Â«SÃ­, y ademÃ¡sÂ», estatus, ganchos y complicaciones al vuelo.</p>
-    </a>
+    <section class="grid">
+      <a class="card" href="oraculo-ideas.html">
+        <h3>Oráculo de ideas</h3>
+        <p>“Sí, y además” • semillas de escena y tono</p>
+      </a>
+      <a class="card" href="pnj-express.html">
+        <h3>PNJ Express</h3>
+        <p>Voz, rasgo, objetivo y gesto clave</p>
+      </a>
+      <a class="card" href="estados-escena.html">
+        <h3>Estados & Estatus</h3>
+        <p>Escala 1–10 y cambios en vivo</p>
+      </a>
+      <a class="card" href="complica-escena.html">
+        <h3>Complica la escena</h3>
+        <p>Afortunadamente / Desafortunadamente</p>
+      </a>
+      <a class="card" href="conectores-equipo.html">
+        <h3>Conectores de equipo</h3>
+        <p>Ganchos y combos para juego coral</p>
+      </a>
+      <a class="card" href="reparto-coral.html">
+        <h3>Reparto coral</h3>
+        <p>Roles rápidos y vínculos</p>
+      </a>
+      <a class="card" href="ritmo-cortes.html">
+        <h3>Ritmo & cortes</h3>
+        <p>Golpes, “clap-clap” y foco</p>
+      </a>
+      <a class="card" href="objetos-aire.html">
+        <h3>Objetos de aire</h3>
+        <p>Acción creíble con mímica útil</p>
+      </a>
+    </section>
 
-    <a class='card tool' href='./src/tools/npc-express.html'>
-      <h3>NPC Express</h3>
-      <p>Generador de PNJ instantÃ¡neos (rasgos, voz, objetivo, secreto).</p>
-    </a>
+    <hr class="sep" />
+    <div style="display:flex; gap:10px; flex-wrap:wrap">
+      <a class="btn btn--accent" href="https://github.com/TU_USUARIO/TU_REPO" target="_blank" rel="noopener">Ver en GitHub</a>
+      <button class="btn btn--ghost" onclick="toast('¡Buen rol!')">Probar feedback</button>
+    </div>
+  </main>
 
-    <a class='card tool' href='./src/tools/escenas-relampago.html'>
-      <h3>Escenas RelÃ¡mpago</h3>
-      <p>Plantillas Â«entra directo a la acciÃ³nÂ» para empezar escenas en 3 lÃ­neas.</p>
-    </a>
-
-    <a class='card tool' href='./src/tools/tabla-tono-ritmo.html'>
-      <h3>Tono & Ritmo</h3>
-      <p>Controles de Â«Color vs ProgresoÂ» y golpes de ritmo para editar escenas.</p>
-    </a>
-
-    <a class='card tool' href='./src/tools/estado-de-animo.html'>
-      <h3>Estado de Ãnimo</h3>
-      <p>Selector de estatus/emociÃ³n para modular interpretaciÃ³n y reacciÃ³n.</p>
-    </a>
-
-    <a class='card tool' href='./src/tools/listas-seeds.html'>
-      <h3>Seeds & Listas</h3>
-      <p>Localizaciones, relaciones, objetos y detonadores de conflicto.</p>
-    </a>
-  </section>
-
-  <footer>Â© TÃ©cnicas Rol â€” GitHub Pages. <a class='inline' href='./docs/README.html'>Docs</a></footer>
-</main>
+  <footer class="app">
+    <div class="container small">© Técnicas Rol · Estilo móvil, elegante y sobrio</div>
+  </footer>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

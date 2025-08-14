@@ -1,0 +1,36 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ritmo & cortes</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head><body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
+    <div class="title">Ritmo & cortes</div>
+    <div class="subtitle">Golpes, “clap-clap” y foco</div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Detecta el golpe</h2>
+    <p class="small">Indicadores para cortar o pasar foco:</p>
+    <ul class="small" style="margin:0; padding-left:18px">
+      <li>Silencio natural o frase redonda</li>
+      <li>Resolución de conflicto</li>
+      <li>Subida rápida de tensión</li>
+      <li>Entrada ideal de otra pareja de PJ</li>
+    </ul>
+    <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap">
+      <button class="btn btn--accent" onclick="toast('¡Clap, clap; chasc, chasc!')">Simular corte</button>
+      <button class="btn" onclick="toast('Paso foco ?')">Pasar foco</button>
+    </div>
+  </section>
+</main>
+
+<footer class="app"><div class="container small">Corta antes de que se agote la fuerza de la escena.</div></footer>
+<script src="assets/js/app.js"></script>
+</body></html>

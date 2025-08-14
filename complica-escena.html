@@ -1,0 +1,48 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Complica la escena</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head><body>
+<header class="app">
+  <div class="app__bar container">
+    <a href="index.html" class="btn btn--ghost" style="padding:8px 12px">? Hub</a>
+    <div class="title">Complica la escena</div>
+    <div class="subtitle">Afortunadamente / Desafortunadamente</div>
+  </div>
+  <div class="progress"><i></i></div>
+</header>
+<main class="container">
+  <section class="section">
+    <h2>Alterna suerte</h2>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px">
+      <button class="btn btn--accent" onclick="go(true)">Afortunadamente…</button>
+      <button class="btn" onclick="go(false)">Desafortunadamente…</button>
+    </div>
+    <div class="section">
+      <h3>Proposición</h3>
+      <p id="linea" class="small">Pulsa un botón para proponer giro.</p>
+    </div>
+  </section>
+</main>
+<footer class="app"><div class="container small">Equilibrio: alterna positivo/negativo para ritmo jugoso.</div></footer>
+<script src="assets/js/app.js"></script>
+<script>
+const pos = [
+ "…justo ahora tenéis una vía alternativa creíble.",
+ "…la ayuda llega, pero exige algo incómodo.",
+ "…la pista difícil se vuelve obvia si aceptáis un pequeño riesgo."
+];
+const neg = [
+ "…la consecuencia os alcanza antes de lo previsto.",
+ "…se complica una relación importante en esta escena.",
+ "…algo cotidiano se vuelve hostil y exige atención inmediata."
+];
+function go(ok){
+  const arr = ok?pos:neg;
+  document.getElementById("linea").innerText = arr[Math.floor(Math.random()*arr.length)];
+  toast(ok? "Suerte favorable":"Suerte adversa");
+}
+</script>
+</body></html>
